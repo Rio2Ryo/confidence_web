@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function IndustryApproach() {
   const { t, language } = useLanguage()
@@ -34,8 +35,8 @@ export default function IndustryApproach() {
                     {t({ JP: '皮脂の油分がある状態', EN: 'Skin Before Application' })}
                   </h4>
                   <div className="space-y-4">
-                    <Image src={language === 'EN' ? "/doc1en.jpg" : "/doc1.jpg"} alt="皮脂の油分がある状態" width={300} height={200} className="w-full rounded-2xl" />
-                    <Image src="/doc1-a.png" alt="皮脂の油分がある状態" width={300} height={200} className="w-full rounded-2xl overflow-hidden" />
+                    <Image src={getAssetPath(language === 'EN' ? 'doc1en.jpg' : 'doc1.jpg')} alt="皮脂の油分がある状態" width={300} height={200} className="w-full rounded-2xl" />
+                    <Image src={getAssetPath('doc1-a.png')} alt="皮脂の油分がある状態" width={300} height={200} className="w-full rounded-2xl overflow-hidden" />
                   </div>
                   <div className="space-y-3 text-sm text-gray-300">
                     <p>{t({ JP: '肌表面の油分が同じ方向に光を跳ね返し、テカリとして目立ちます。', EN: 'Oil on the surface reflects light in the same direction, so shine becomes visible.' })}</p>
@@ -48,8 +49,8 @@ export default function IndustryApproach() {
                     {t({ JP: 'Confidence塗布後', EN: 'After Confidence' })}
                   </h4>
                   <div className="space-y-4">
-                    <Image src={language === 'EN' ? "/doc2en.jpg" : "/doc2.jpg"} alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
-                    <Image src="/doc2-b.jpg" alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
+                    <Image src={getAssetPath(language === 'EN' ? 'doc2en.jpg' : 'doc2.jpg')} alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
+                    <Image src={getAssetPath('doc2-b.jpg')} alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
                   </div>
                   <div className="space-y-3 text-sm text-gray-300">
                     <p>{t({ JP: 'Mother Vegetable由来の粒子はそれぞれ個性があり、当たった光を細かく散乱。テカリが艶のある透明感に変わります。', EN: 'Mother Vegetable particles are all slightly different, scattering light and leaving only a refined glow.' })}</p>
@@ -75,7 +76,7 @@ export default function IndustryApproach() {
                   </h4>
                   <div className="space-y-4">
                     {/*<Image src="/doc3.jpg" alt="シワや毛穴がある状態" width={300} height={200} className="w-full rounded-2xl" />*/}
-                    <Image src={language === 'EN' ? "/doc3en.jpg" : "/doc3.jpg"} alt="シワや毛穴がある状態" width={300} height={200} className="w-full rounded-2xl overflow-hidden" />
+                    <Image src={getAssetPath(language === 'EN' ? 'doc3en.jpg' : 'doc3.jpg')} alt="シワや毛穴がある状態" width={300} height={200} className="w-full rounded-2xl overflow-hidden" />
                   </div>
                   <div className="space-y-3 text-sm text-gray-300">
                     <p>{t({ JP: '寝る前などのすっぴんの際はどうしてもシワや毛穴が目立ってしまいます。', EN: 'When bare-faced (e.g., before bed), lines and pores inevitably stand out.' })}</p>
@@ -89,7 +90,7 @@ export default function IndustryApproach() {
                   </h4>
                   <div className="space-y-4">
                     {/*<Image src="/doc4.jpg" alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />*/}
-                    <Image src={language === 'EN' ? "/doc4en.jpg" : "/doc4.jpg"} alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
+                    <Image src={getAssetPath(language === 'EN' ? 'doc4en.jpg' : 'doc4.jpg')} alt="Confidence塗布後" width={300} height={200} className="w-full rounded-2xl" />
                   </div>
                   <div className="space-y-3 text-sm text-gray-300">
                     <p>{t({ JP: '寝る前にも使えるMother Vegetableは、シミや毛穴にも入り込んで目立たせません。', EN: 'Mother Vegetable, safe to use before bed, fills dark spots and pores to keep them less visible.' })}</p>

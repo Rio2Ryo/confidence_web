@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -10,7 +11,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen overflow-hidden bg-black text-white flex items-center justify-center">
       <div className="absolute inset-0">
         <Image
-          src="/hero-earth-regeneration-Dnk2z_VF.png"
+          src={getAssetPath('hero-earth-regeneration-Dnk2z_VF.png')}
           alt="Mother Vegetable Confidence"
           fill
           priority
@@ -20,7 +21,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 flex flex-col items-center gap-8">
         <Image
-          src="/confidence_logo_touka.png"
+          src={getAssetPath('confidence_logo_touka.png')}
           alt="Mother Vegetable Confidence Logo"
           width={350}
           height={140}

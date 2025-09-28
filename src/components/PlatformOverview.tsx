@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { getAssetPath } from '../utils/config'
 
 export default function PlatformOverview() {
   return (
@@ -10,7 +11,7 @@ export default function PlatformOverview() {
           <div className="absolute inset-0 bg-gradient-to-b from-green-900/10 to-black/30 rounded-2xl"></div>
           <div className="relative">
             <Image
-              src="/platform-overview.png"
+              src={getAssetPath('platform-overview.png')}
               alt="Mother Vegetables Project Overview"
               width={1200}
               height={800}

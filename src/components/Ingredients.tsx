@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function Ingredients() {
   const { t } = useLanguage()
@@ -60,7 +61,7 @@ export default function Ingredients() {
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="relative w-full md:w-48 h-48 md:h-52 overflow-hidden rounded-2xl">
                   <Image
-                    src="/doc1-a.jpg"
+                    src={getAssetPath('doc1-a.jpg')}
                     alt="Mother Vegetables ingredient"
                     fill
                     className="object-cover"
@@ -101,10 +102,10 @@ export default function Ingredients() {
 
           <div className="space-y-6">
             <div className="relative rounded-3xl overflow-hidden border border-white/15">
-              <Image src="/doc2.jpg" alt="Powder texture close up" width={640} height={800} className="w-full h-full object-cover" />
+              <Image src={getAssetPath('doc2.jpg')} alt="Powder texture close up" width={640} height={800} className="w-full h-full object-cover" />
             </div>
             <div className="relative rounded-3xl overflow-hidden border border-white/15">
-              <Image src="/doc3.jpg" alt="Application image" width={640} height={800} className="w-full h-full object-cover" />
+              <Image src={getAssetPath('doc3.jpg')} alt="Application image" width={640} height={800} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

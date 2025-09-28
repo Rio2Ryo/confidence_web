@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function HeroContent() {
   const { t } = useLanguage()
@@ -25,7 +26,7 @@ export default function HeroContent() {
 
             <div className="relative w-full">
               <Image
-                src="/ms-banner.webp"
+                src={getAssetPath('ms-banner.webp')}
                 alt="Mother Vegetable"
                 width={1200}
                 height={600}

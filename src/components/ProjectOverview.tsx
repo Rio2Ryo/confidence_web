@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function ProjectOverview() {
   const { t } = useLanguage()
@@ -58,7 +59,7 @@ export default function ProjectOverview() {
 
           <div className="flex justify-center mt-12">
             <Image
-              src="/mazavege.png"
+              src={getAssetPath('mazavege.png')}
               alt="Mother Vegetable"
               width={400}
               height={200}

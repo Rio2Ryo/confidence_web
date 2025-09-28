@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage()
@@ -39,7 +40,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Image src="/mothervegetables_logo_white.png" alt="Mother Vegetable" width={100} height={40} />
+            <Image src={getAssetPath('mothervegetables_logo_white.png')} alt="Mother Vegetable" width={100} height={40} />
           </div>
 
           <nav className="hidden md:flex flex-wrap items-center justify-center gap-3 lg:gap-5 text-sm">

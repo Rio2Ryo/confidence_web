@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../utils/config'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -10,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-black/95 border-t border-white/10">
       <div className="container mx-auto px-4 py-12 flex flex-col items-center text-center gap-5">
-        <Image src="/mothervegetables_logo_white.png" alt="Mother Vegetable Confidence" width={150} height={60} />
+        <Image src={getAssetPath('mothervegetables_logo_white.png')} alt="Mother Vegetable Confidence" width={150} height={60} />
         <div className="space-y-2 text-sm text-gray-300">
           <p>{t({
             JP: 'dotpb株式会社 / 〒103-0022 東京都中央区日本橋室町1-2-6-7F',

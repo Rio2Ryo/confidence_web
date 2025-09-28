@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getAssetPath } from '../utils/config'
 
 export default function ProjectDetails() {
   return (
@@ -35,7 +36,7 @@ export default function ProjectDetails() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-md">
                   <Image
-                    src="/expo2025.png"
+                    src={getAssetPath('expo2025.png')}
                     alt="OSAKA, KANSAI, JAPAN EXPO 2025"
                     width={600}
                     height={400}
@@ -46,7 +47,7 @@ export default function ProjectDetails() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-md">
                   <Image
-                    src="/algae-kitty.jpg"
+                    src={getAssetPath('algae-kitty.jpg')}
                     alt="Hello Kitty × Algae"
                     width={600}
                     height={400}

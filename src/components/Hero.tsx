@@ -22,10 +22,10 @@ export default function Hero() {
         <Image
           src="/confidence_logo_touka.png"
           alt="Mother Vegetable Confidence Logo"
-          width={350}
-          height={140}
+          width={280}
+          height={112}
           priority
-          className="w-auto h-auto max-w-[220px] lg:max-w-[350px]"
+          className="w-auto h-auto max-w-[180px] lg:max-w-[280px]"
         />
         <div className="text-center space-y-4">
           <p className="text-lg md:text-xl font-light tracking-wider">For Skin</p>

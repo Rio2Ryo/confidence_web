@@ -2,6 +2,7 @@
 
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import EarthColor from '../components/EarthColor'
 import HeroContent from '../components/HeroContent'
 import ProjectOverview from '../components/ProjectOverview'
 import IndustryApproach from '../components/IndustryApproach'
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen text-white relative">
       <Header />
       <Hero />
+      <EarthColor />
       <HeroContent />
       <ProjectOverview />
       <IndustryApproach />
